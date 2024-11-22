@@ -18,20 +18,39 @@ vector<string> fileRead(){
     cout << array.size();
     return array;
 }
-void fileOutput(){
 
+void fileOutput(vector<string> &array){
+    ofstream out;
+    out.open("hello.txt");
+  if (out.is_open())
+  {
+      for(size_t i = 0; i < array.size(); i++){
+                out << array[i] << endl;
+      }
+  }
+  out.close();
 }
 
-void print(){
-
+void print(vector<string> array){
+    for(size_t i = 0; i < array.size(); i++){
+        cout << array[i] << endl;
+    }
+}
+void sign (vector<string> array){
 }
 
 int main()
 {
 
-    vector<string> kofe = fileRead();
-    cout << kofe.size();
-    cout << 44;
+    vector<string> array  =input();
+    //cout << array.size();
+
+    pupunt(array);
+
+    //vector<string> array1  = bubunt(array);
+
+    mumunt(bubunt(array));
+
 
     return 0;
 }
