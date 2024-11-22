@@ -11,11 +11,10 @@ vector<string> fileRead(){
     ifstream file("VanyaLevaSeva.txt");
     if(file.is_open()){
         while(getline(file, ordinary)){
-            array.push_back(ordinary) ;
+            array.push_back(ordinary);
         }
     }
     file.close();
-    cout << array.size();
     return array;
 }
 void fileOutput(){
@@ -28,9 +27,6 @@ void print(){
 
 int main()
 {
-
-    vector<string> kofe = fileRead();
-    cout << kofe.size();
-
+    vector<string> array = fileRead();
     return 0;
 }
