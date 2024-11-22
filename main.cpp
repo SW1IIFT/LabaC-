@@ -29,6 +29,13 @@ void fileOutput(vector<string> &array){
   out.close();
 }
 
+
+vector<string> includeLastChar(vector<string> array){
+    for(size_t i = 0; i < array.size(); i++){
+        array[i] += '!';
+    }
+    return array;
+}
 void print(vector<string> array){
     for(size_t i = 0; i < array.size(); i++){
         cout << array[i] << endl;
@@ -36,8 +43,11 @@ void print(vector<string> array){
 }
 int main()
 {
+
+    vector<string> array = includeLastChar(fileRead());
     vector<string> array  = fileRead();
     fileOutput(array);
     print(array);
+
     return 0;
 }
