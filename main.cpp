@@ -22,15 +22,16 @@ void fileOutput(){
 
 }
 
-void print(){
-
+vector<string> includeLastChar(vector<string> array){
+    for(size_t i = 0; i < array.size(); i++){
+        array[i] += '!';
+    }
+    return array;
 }
 
 int main()
 {
-
-    vector<string> kofe = fileRead();
-    cout << kofe.size();
+    vector<string> array = includeLastChar(fileRead());
 
     return 0;
 }
