@@ -45,7 +45,6 @@ int main()
 {
 
     vector<string> array = includeLastChar(fileRead());
-    vector<string> array  = fileRead();
     fileOutput(array);
     print(array);
 
