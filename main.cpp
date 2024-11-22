@@ -31,6 +31,7 @@ int main()
 
     vector<string> kofe = fileRead();
     cout << kofe.size();
+    cout << 44;
 
     return 0;
 }
