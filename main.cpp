@@ -6,18 +6,17 @@
 using namespace std;
 
 vector<string> fileRead(){
-    string s;
+    string ordinary;
     vector<string> array;
     ifstream file("VanyaLevaSeva.txt");
     if(file.is_open()){
-        while(getline(file, s)){
-            array.push_back(s) ;
+        while(getline(file, ordinary)){
+            array.push_back(ordinary);
         }
     }
     file.close();
     return array;
 }
-
 void fileOutput(vector<string> &array){
     ofstream out;
     out.open("hello.txt");
@@ -35,23 +34,10 @@ void print(vector<string> array){
         cout << array[i] << endl;
     }
 }
-void sign (vector<string> array){
-}
-
 int main()
 {
-
     vector<string> array  = fileRead();
-    //cout << array.size();
-
     fileOutput(array);
-
-    //vector<string> array1  = bubunt(array);
-
     print(array);
-
-    //sign(print(array));
-
-
     return 0;
 }
