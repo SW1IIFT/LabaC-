@@ -15,7 +15,6 @@ vector<string> fileRead(){
         }
     }
     file.close();
-    cout << array.size();
     return array;
 }
 
@@ -42,14 +41,16 @@ void sign (vector<string> array){
 int main()
 {
 
-    vector<string> array  =input();
+    vector<string> array  = fileRead();
     //cout << array.size();
 
-    pupunt(array);
+    fileOutput(array);
 
     //vector<string> array1  = bubunt(array);
 
-    mumunt(bubunt(array));
+    print(array);
+
+    //sign(print(array));
 
 
     return 0;
