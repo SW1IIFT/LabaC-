@@ -6,16 +6,15 @@
 using namespace std;
 
 vector<string> fileRead(){
-    string s;
+    string ordinary;
     vector<string> array;
     ifstream file("VanyaLevaSeva.txt");
     if(file.is_open()){
-        while(getline(file, s)){
-            array.push_back(s) ;
+        while(getline(file, ordinary)){
+            array.push_back(ordinary);
         }
     }
     file.close();
-    cout << array.size();
     return array;
 }
 void fileOutput(){
@@ -28,9 +27,6 @@ void print(){
 
 int main()
 {
-
-    vector<string> kofe = fileRead();
-    cout << kofe.size();
-
+    vector<string> array = fileRead();
     return 0;
 }
