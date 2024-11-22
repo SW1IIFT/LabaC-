@@ -17,16 +17,27 @@ vector<string> fileRead(){
     file.close();
     return array;
 }
-void fileOutput(){
-
+void fileOutput(vector<string> &array){
+    ofstream out;
+    out.open("hello.txt");
+  if (out.is_open())
+  {
+      for(size_t i = 0; i < array.size(); i++){
+                out << array[i] << endl;
+      }
+  }
+  out.close();
 }
 
-void print(){
-
+void print(vector<string> array){
+    for(size_t i = 0; i < array.size(); i++){
+        cout << array[i] << endl;
+    }
 }
-
 int main()
 {
-    vector<string> array = fileRead();
+    vector<string> array  = fileRead();
+    fileOutput(array);
+    print(array);
     return 0;
 }
